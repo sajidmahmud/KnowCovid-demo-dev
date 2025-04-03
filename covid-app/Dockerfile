@@ -1,4 +1,4 @@
-FROM mizzouceri/tomcat-mvn-java11
+FROM mizzouceri/tomcat-mvn-java11:V1
 MAINTAINER Songjie Wang "wangso@missouri.edu"
 
 # Fix Debian repository issues
