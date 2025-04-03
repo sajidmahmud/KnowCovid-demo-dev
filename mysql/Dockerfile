@@ -18,7 +18,7 @@ ENV MYSQL_DATABASE=covid19
 COPY covid19.sql /docker-entrypoint-initdb.d/
 
 # Set your custom entrypoint
-# ENTRYPOINT ["entrypoint.sh"]
+ENTRYPOINT ["/entrypoint.sh"]
 
 # Start MySQL server
 CMD ["mysqld"]
