@@ -1,5 +1,4 @@
 FROM mysql:latest
-
 MAINTAINER Songjie Wang "wangso@missouri.edu"
 
 ARG DEBIAN_FRONTEND=noninteractive
