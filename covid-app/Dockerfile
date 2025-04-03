@@ -1,4 +1,4 @@
-FROM mizzouceri/knowcovid-server
+FROM mizzouceri/tomcat-mvn-java11
 MAINTAINER Songjie Wang "wangso@missouri.edu"
 
 # Fix Debian repository issues
