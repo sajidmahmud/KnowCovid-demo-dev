@@ -1,42 +1,59 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" ng-app="mainApp">
-<head>
-    <th:block th:include="fragments/header :: header"></th:block>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymleaf.org">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ng-table/1.0.0/ng-table.min.js"></script>
 
-    <!-- AngularJS from your static directory -->
-    <script th:src="@{/js/angular.js}"></script>
-    <!-- Dependencies -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.30/angular-ui-router.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-sanitize.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-chart.js/1.1.1/angular-chart.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ng-table/1.0.0/ng-table.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.5.0/ui-bootstrap-tpls.min.js"></script>
-    <!-- Your mainApp.js -->
-    <script th:src="@{/js/mainApp.js}"></script>
-</head>
-<body>
-    <div id="cover" style="display: none;"></div>
-    <div class="page-content">
-        <div class="content-wrapper">
-            <th:block th:include="fragments/page_header :: page_header"></th:block>
+<th:block th:include="fragments/header :: header"></th:block>
 
-            <section class="bg-light" style="background: #fff !important; padding: 60px 0 0 0 !important;">
-                <div class="container">
-                    <div class="row">
-                        <div class="content" ui-view=""></div>
-                    </div>
-                </div>
-            </section>
-        </div>
-    </div>
+<body  ng-app="mainApp">
 
-    <h1 style="text-align: center;">This is Version 2!</h1>
+<div id="cover" style="display: none;"></div>
+	<!-- Page content -->
+	<div class="page-content">
 
-    <div ng-controller="chatbot-controller">
-        <th:block th:include="fragments/chatbot :: chatbot"></th:block>
-    </div>
 
-    <th:block th:include="fragments/footer :: footer"></th:block>
+		<!-- Main content -->
+		<div class="content-wrapper">
+			<th:block th:include="fragments/page_header:: page_header"></th:block>
+
+			<section class="bg-light" style="background: #fff !important;padding: 60px 0 0 0 !important;">
+				<div class="container">
+
+					<!-- <div class="row">
+						<div class="col-12">
+							<a style="color: black; background: transparent; border: none;"
+								class="btn btn-primary btn-lg" href="#!/"
+								role="button">
+								<h3 class="section-heading">OnTimeRecommend Research</h3>
+							</a>
+							<hr class="hr-line" />
+						</div>
+					</div> -->
+
+					<div class="row">
+						 
+							<div class="content" ui-view=""></div>
+							
+					</div>
+				 </div>
+						 
+			</section>
+
+		</div>
+
+	</div>
+	<!-- /content area -->
+		<h1 style="text-align: center;"> This is Version 2! </h1>
+
+		
+		<div ng-controller="chatbot-controller"> 
+		 <th:block th:include="fragments/chatbot :: chatbot"></th:block>
+	   </div>
+	   
+
+	
+	<th:block th:include="fragments/footer :: footer"></th:block>
+
 </body>
+
 </html>
