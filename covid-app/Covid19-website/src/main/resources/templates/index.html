@@ -1,21 +1,20 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" ng-app="mainApp">
 <head>
-    <!-- Thymeleaf header fragment -->
     <th:block th:include="fragments/header :: header"></th:block>
 
-    <!-- Core AngularJS -->
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <!-- AngularJS from your static directory -->
+    <script th:src="@{/js/angular.js}"></script>
     <!-- Dependencies -->
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.min.js"></script>
+    <script th:src="@{/js/angular-route.js}"></script> <!-- If you have this locally, else use CDN -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.30/angular-ui-router.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-sanitize.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-chart.js/1.1.1/angular-chart.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ng-table/1.0.0/ng-table.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.5.0/ui-bootstrap-tpls.min.js"></script>
-    <!-- Your app script (adjust path as needed) -->
-    <script src="/js/your-app.js"></script>
+    <!-- Your mainApp.js -->
+    <script th:src="@{/js/mainApp.js}"></script>
 </head>
 <body>
     <div id="cover" style="display: none;"></div>
