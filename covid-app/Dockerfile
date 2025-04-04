@@ -8,6 +8,9 @@ RUN sed -i 's|deb.debian.org/debian buster|deb.debian.org/debian oldoldstable|g'
 RUN apt-get -y update && apt-get -y install lsb-release net-tools nano
 RUN apt-get -y install default-mysql-server maven
 
+RUN mkdir -p /usr/local/tomcat/webapps/ROOT/js
+COPY Covid19-website/src/main/resources/static/js/ng-table.js /usr/local/tomcat/webapps/ROOT/js/
+COPY Covid19-website/target/*.war /usr/local/tomcat/webapps/ROOT.war
 WORKDIR /root 
 ADD Covid19-website /root/Covid19-website
 
