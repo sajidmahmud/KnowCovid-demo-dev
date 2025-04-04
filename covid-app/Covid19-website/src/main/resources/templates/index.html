@@ -1,14 +1,19 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml"
     xmlns:th="http://www.thymeleaf.org">
+<head>
+    <!-- Load AngularJS FIRST (only once) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    
+    <!-- Load ngTable (use either CDN or local, not both) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ng-table/3.0.1/ng-table.js"></script>
+    <!-- OR if using local: -->
+    <!-- <script src="/js/ng-table.js"></script> -->
+    
+    <!-- Include header (AFTER scripts to prevent duplicate loading) -->
+    <th:block th:include="fragments/header :: header"></th:block>
+</head>
 
-<!-- Include header (ensure AngularJS loads FIRST) -->
-<th:block th:include="fragments/header :: header"></th:block>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
-    <!-- CDN -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/ng-table/3.0.1/ng-table.js"></script>
-<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/ng-table/3.0.1/ng-table.min.js"></script> -->
-<!-- <script src="/js/ng-table.js"></script> -->
 <body ng-app="mainApp">
     <div id="cover" style="display: none;"></div>
     <div class="page-content">
@@ -35,4 +40,3 @@
     <th:block th:include="fragments/footer :: footer"></th:block>
 </body>
 </html>
-
