@@ -1,4 +1,4 @@
-From mizzouceri/knowcovid-python-server
+From python:3.8
 MAINTAINER Songjie Wang "wangso@missouri.edu"
 
 ARG DEBIAN_FRONTEND=noninteractive
