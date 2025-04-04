@@ -15,4 +15,5 @@ WORKDIR /root/Covid19-website
 
 
 # RUN mvn clean package
-RUN cp /root/Covid19-website/target/*.war /usr/local/tomcat/webapp/Covid-19.war
+# RUN cp /root/Covid19-website/target/*.war /usr/local/tomcat/webapp/Covid-19.war
+COPY Covid19-website/src/main/resources/static/js/ng-table.js /usr/local/tomcat/webapps/ROOT/js/
